@@ -33,6 +33,15 @@ Page({
   onLoad(options) {
     this.videoCtx = wx.createVideoContext('myVideo');
   },
+  
+  //生命周期函数--监听页面初次渲染完成
+  onReady() {
+    this.setData({
+      src: 'http://arch.ahnu.edu.cn/__local/6/CB/D1/C2DF3FC847F4CE2ABB67034C595_025F0082_ABD7AE2.mp4?e=.mp4'
+    })
+    //播放视频
+    this.videoCtx.play();
+  },
 
   //播放视频
   playVideo(e) {
